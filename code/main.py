@@ -1,17 +1,22 @@
 import tkinter as tk
 
 calculation = ''
+Ans = ''
 
 def add_to_calculation(symbol):
-    global calculation # ???
+    global calculation
+
     calculation += str(symbol)
     text_result.delete(1.0, 'end')
     text_result.insert(1.0, calculation)
 
 def evaluate_calculation():
     global calculation
+    global Ans
+
     try:
         calculation = str(eval(calculation))
+        Ans = calculation
         text_result.delete(1.0, 'end')
         text_result.insert(1.0, calculation)
     except:
@@ -20,10 +25,12 @@ def evaluate_calculation():
 
 def clear_field():
     global calculation
+
     calculation = '' 
     text_result.delete(1.0, 'end')
+    
 
-def make_dynamic(widget): # CHECK
+def make_dynamic(widget): 
     col_count,row_count = widget.grid_size()
     
     for i in range(row_count):
@@ -44,6 +51,7 @@ window_width = 250 # length of column
 global window
 window = tk.Tk()
 window.geometry(str(window_height) + 'x' + str(window_width))
+window.title('CalcUlator')
 window.update()
 
 # Create a place to text
