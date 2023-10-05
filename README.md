@@ -9,8 +9,14 @@ This is a simple command-line calculator program written in Python. It allows yo
 ## Getting Started
 ### Prerequisites
 
-You'll need to have Python installed on your computer to run this calculator. You can download Python from the official website: [Python.org](https://www.python.org/downloads/)
+- Python 3.x: Make sure you have Python 3.x installed on your system. You can download it from [python.org](https://www.python.org/downloads/).
+
+- Tkinter: Tkinter is included with most Python installations, but if it's not available on your system, you may need to install it separately.
 
 ### Installation
 
 1. Clone the repository to your local machine or download the ZIP file and extract it.
+
+2. Navigate to the project directory.
+
+3. Run the `main.py` file to launch the Math Notebook application.
